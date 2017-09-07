@@ -104,6 +104,8 @@ class Course():
                     doc = pq(html)
                     result = doc('#loginError').text()
                     print(result)
+                    if '重新登录' in result:
+                        self.main()
             except:
                 print('出现异常')
     
